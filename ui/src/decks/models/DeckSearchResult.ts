@@ -296,6 +296,29 @@ export class DeckUtils {
                 deck.totalPower,
                 deck.totalArmor,
 
+                deck.housesAndCards[0].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length,
+                deck.housesAndCards[1].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length,
+                deck.housesAndCards[2].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length,
+                deck.housesAndCards[0].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length +
+                deck.housesAndCards[1].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length +
+                deck.housesAndCards[2].cards.filter(card => card.traits?.includes("MUTANT") ?? false).length,
+              
+                deck.housesAndCards[0].cards.manipulatesTide(cards).length,
+                deck.housesAndCards[1].cards.manipulatesTide(cards).length,
+                deck.housesAndCards[2].cards.manipulatesTide(cards).length, 
+                deck.housesAndCards[0].cards.manipulatesTide(cards).length +
+                deck.housesAndCards[1].cards.manipulatesTide(cards).length +
+                deck.housesAndCards[2].cards.manipulatesTide(cards).length,
+
+                deck.housesAndCards[0].cards.usesTide(cards).length,
+                deck.housesAndCards[1].cards.usesTide(cards).length,
+                deck.housesAndCards[2].cards.usesTide(cards).length,
+                deck.housesAndCards[0].cards.usesTide(cards).length +
+                deck.housesAndCards[1].cards.usesTide(cards).length +
+                deck.housesAndCards[2].cards.usesTide(cards).length,    
+
+                deck.tokenCreationValues?.tokensPerGame,
+
                 deck.powerLevel,
                 deck.chains,
                 deck.wins,
@@ -357,6 +380,23 @@ export class DeckUtils {
             "Card Archive Count",
             "Total Power",
             "Total Armor",
+
+            "House 1 Mutants",
+            "House 2 Mutants",
+            "House 3 Mutants",
+            "Mutants",
+
+            "House 1 Manipulates Tide",
+            "House 2 Manipulates Tide",
+            "House 3 Manipulates Tide",
+            "Manipulates Tide",
+
+            "House 1 Uses Tide",
+            "House 2 Uses Tide",
+            "House 3 Uses Tide",
+            "Uses Tide",
+
+            "Token Generation",
 
             "Power Level",
             "Chains",
